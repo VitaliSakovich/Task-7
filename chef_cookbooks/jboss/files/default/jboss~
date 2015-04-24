@@ -1,0 +1,34 @@
+#!/bin/bash
+# chkconfig: 345 20 80
+
+start(){
+	echo "Starting Jboss.."
+	/opt/jboss-5.1.0.GA/bin/run.sh -c default  -b 10.6.205.103 > /home/log.txt 2> /home/error.txt &
+}
+
+stop(){
+	echo "Stopping Jboss.."
+	/opt/jboss-5.1.0.GA/bin/shutdown.sh -S -u admin -p admin -s 10.6.205.103 &
+}
+
+restart(){
+	stop
+	sleep 15
+	start
+}
+
+case "$1" in
+	start)
+		start
+		;;
+	stop)
+		stop
+		;;
+	restart)
+		restart
+		;;
+*)
+	echo "Usage: jboss {start|stop|restart}"
+	exit 1
+esac
+exit 0

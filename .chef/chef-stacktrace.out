@@ -1,0 +1,48 @@
+Generated at 2015-04-24 15:45:34 +0300
+Chef::Exceptions::FileNotFound: cookbook_file[jboss.zip] (jboss::default line 12) had an error: Chef::Exceptions::FileNotFound: Cookbook 'jboss' (0.1.0) does not contain a file at any of these locations:
+  files/centos-6.4/jboss.zip
+  files/centos/jboss.zip
+  files/default/jboss.zip
+  files/jboss.zip
+
+This cookbook _does_ contain: ['files/default/jboss~','files/default/jboss']
+/opt/chefdk/embedded/apps/chef/lib/chef/cookbook_version.rb:337:in `preferred_manifest_record'
+/opt/chefdk/embedded/apps/chef/lib/chef/cookbook_version.rb:345:in `preferred_filename_on_disk_location'
+/opt/chefdk/embedded/apps/chef/lib/chef/provider/cookbook_file/content.rb:31:in `file_for_provider'
+/opt/chefdk/embedded/apps/chef/lib/chef/file_content_management/content_base.rb:40:in `tempfile'
+/opt/chefdk/embedded/apps/chef/lib/chef/provider/file.rb:451:in `tempfile'
+/opt/chefdk/embedded/apps/chef/lib/chef/provider/file.rb:337:in `do_generate_content'
+/opt/chefdk/embedded/apps/chef/lib/chef/provider/file.rb:148:in `action_create'
+/opt/chefdk/embedded/apps/chef/lib/chef/provider/file.rb:160:in `action_create_if_missing'
+/opt/chefdk/embedded/apps/chef/lib/chef/provider.rb:145:in `run_action'
+/opt/chefdk/embedded/apps/chef/lib/chef/resource.rb:582:in `run_action'
+/opt/chefdk/embedded/apps/chef/lib/chef/runner.rb:49:in `run_action'
+/opt/chefdk/embedded/apps/chef/lib/chef/runner.rb:81:in `block (2 levels) in converge'
+/opt/chefdk/embedded/apps/chef/lib/chef/runner.rb:81:in `each'
+/opt/chefdk/embedded/apps/chef/lib/chef/runner.rb:81:in `block in converge'
+/opt/chefdk/embedded/apps/chef/lib/chef/resource_collection/resource_list.rb:83:in `block in execute_each_resource'
+/opt/chefdk/embedded/apps/chef/lib/chef/resource_collection/stepable_iterator.rb:116:in `call'
+/opt/chefdk/embedded/apps/chef/lib/chef/resource_collection/stepable_iterator.rb:116:in `call_iterator_block'
+/opt/chefdk/embedded/apps/chef/lib/chef/resource_collection/stepable_iterator.rb:85:in `step'
+/opt/chefdk/embedded/apps/chef/lib/chef/resource_collection/stepable_iterator.rb:104:in `iterate'
+/opt/chefdk/embedded/apps/chef/lib/chef/resource_collection/stepable_iterator.rb:55:in `each_with_index'
+/opt/chefdk/embedded/apps/chef/lib/chef/resource_collection/resource_list.rb:81:in `execute_each_resource'
+/opt/chefdk/embedded/apps/chef/lib/chef/runner.rb:80:in `converge'
+/opt/chefdk/embedded/apps/chef/lib/chef/client.rb:315:in `converge'
+/opt/chefdk/embedded/apps/chef/lib/chef/client.rb:400:in `block in run'
+/opt/chefdk/embedded/apps/chef/lib/chef/client.rb:399:in `catch'
+/opt/chefdk/embedded/apps/chef/lib/chef/client.rb:399:in `run'
+/opt/chefdk/embedded/apps/chef/lib/chef/application.rb:261:in `block in fork_chef_client'
+/opt/chefdk/embedded/apps/chef/lib/chef/application.rb:249:in `fork'
+/opt/chefdk/embedded/apps/chef/lib/chef/application.rb:249:in `fork_chef_client'
+/opt/chefdk/embedded/apps/chef/lib/chef/application.rb:215:in `block in run_chef_client'
+/opt/chefdk/embedded/apps/chef/lib/chef/local_mode.rb:38:in `with_server_connectivity'
+/opt/chefdk/embedded/apps/chef/lib/chef/application.rb:201:in `run_chef_client'
+/opt/chefdk/embedded/apps/chef/lib/chef/application/solo.rb:245:in `block in interval_run_chef_client'
+/opt/chefdk/embedded/apps/chef/lib/chef/application/solo.rb:234:in `loop'
+/opt/chefdk/embedded/apps/chef/lib/chef/application/solo.rb:234:in `interval_run_chef_client'
+/opt/chefdk/embedded/apps/chef/lib/chef/application/solo.rb:224:in `run_application'
+/opt/chefdk/embedded/apps/chef/lib/chef/application.rb:58:in `run'
+/opt/chefdk/embedded/apps/chef/bin/chef-solo:25:in `<top (required)>'
+/usr/bin/chef-solo:40:in `load'
+/usr/bin/chef-solo:40:in `<main>'
